@@ -26,7 +26,7 @@ GRAY = (150, 150, 150)
 FPS = 60
 
 
-def copy(text):
+def copy_func(text):
     if "linux" in sys.platform:
         pyperclip.copy(text)
     else:
@@ -156,7 +156,7 @@ def main():
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     # Call the on_mouse_button_down() function
                     if copy_rect.collidepoint(event.pos):
-                        copy(answer)
+                        copy_func(answer)
 
         screen.blit(background, background_rect)
         screen.blit(darkness, darkness_rect)
