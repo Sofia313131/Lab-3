@@ -154,7 +154,6 @@ def main():
                 if event.key == pygame.K_RETURN:
                     answer = keygen("".join([i.text for i in containers]))
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                # Call the on_mouse_button_down() function
                 if copy_rect.collidepoint(event.pos):
                     copy_func(answer)
 
